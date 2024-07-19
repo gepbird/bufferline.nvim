@@ -217,7 +217,7 @@ local function add_space(ctx, length)
   end
   if not options.show_buffer_close_icons then
     right_size = right_size > 0 and right_size - strwidth(icon) or right_size
-    left_size = left_size + strwidth(icon)
+    left_size = left_size + (strwidth(icon) - 1)
   end
   return pad({
     left = { size = left_size, hl = curr_hl.buffer },
@@ -374,6 +374,7 @@ end
 ---@param ctx bufferline.RenderContext
 ---@return bufferline.Segment
 local function get_name(ctx)
+  print(get_max_length(ctx))
   local name = utils.truncate_name(ctx.tab.name, get_max_length(ctx))
   -- escape filenames that contain "%" as this breaks in statusline patterns
   name = name:gsub("%%", "%%%1")

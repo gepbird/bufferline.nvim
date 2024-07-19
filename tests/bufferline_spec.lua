@@ -1,3 +1,4 @@
+print('foo')
 local utils = require("tests.utils")
 
 describe("Bufferline tests:", function()

@@ -633,9 +633,9 @@ local function get_defaults()
     themable = true, -- whether or not bufferline highlights can be overridden externally
     style_preset = preset,
     numbers = "none",
-    buffer_close_icon = "",
-    modified_icon = "●",
-    close_icon = "",
+    buffer_close_icon = " ",
+    modified_icon = "● ",
+    close_icon = " ",
     close_command = "bdelete! %d",
     left_mouse_command = "buffer %d",
     right_mouse_command = "bdelete! %d",
@@ -644,8 +644,8 @@ local function get_defaults()
     -- background highlight doesn't appear in the middle
     -- alternatives:  right aligned => ▕ ▐ ,  left aligned => ▍
     indicator = { icon = constants.indicator, style = "icon" },
-    left_trunc_marker = "",
-    right_trunc_marker = "",
+    left_trunc_marker = " ",
+    right_trunc_marker = " ",
     separator_style = "thin",
     name_formatter = nil,
     truncate_names = true,
